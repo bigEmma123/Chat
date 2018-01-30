@@ -16,15 +16,29 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('message',require('./components/MessageComponent.vue'));
 
 const app = new Vue({
     el: '#app',
     methods: {
        send:function(){
            console.log(this.message)
-       }
+           if(this.message.length>0)
+           {
+               this.chat.messages.push(this.message);
+               this.message='';
+           }
+           console.log(this.chat.messages.length)
+           
+        }
+          
      },
-    data:{"message":"Hello Laravel I am Vue"},
+    data:{
+        "message":"",
+        "chat":{
+            "messages":[]
+        }
+    },
     mounted () {
         console.log("Vue Mounted");
     }

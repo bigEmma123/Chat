@@ -1,0 +1,7 @@
+.col-md-6{
+    height:300px;
+    background-color:#312f51;
+    color:white;
+    margin:10px;
+    overflow-y:scroll;
+}
