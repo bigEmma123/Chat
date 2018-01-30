@@ -14,7 +14,7 @@
        @{{ message }}
        <input class='form-control ' v-model="message"  @keyup.enter='send()' />
        <div class='row'>
-         <div class='col-md-6'>
+         <div class='col-md-6' v-chat-scroll >
            <message v-for="value in chat.messages" v-bind:key='value.index' >
           @{{ value }} </message>
         </div>

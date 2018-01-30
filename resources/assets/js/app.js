@@ -18,6 +18,9 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('message',require('./components/MessageComponent.vue'));
 
+//var Vue=require('vue');
+Vue.use(require('vue-chat-scroll'));
+
 const app = new Vue({
     el: '#app',
     methods: {
